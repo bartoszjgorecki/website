@@ -1,0 +1,72 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+#baner{
+    background-color: darkgreen;
+    width: 100%;
+    padding: 5px;
+    display: block;
+    float: left;
+    color: white;
+}
+#lewy{
+    background-color: palegreen;
+    width: 30%;
+    padding-bottom: 100px;
+    height: 500px;
+    display: block;
+    float: left;
+}
+#prawy{
+    background-color: honeydew;
+    width: 70%;
+    height: 500px;
+    padding-top: 100px;
+    display: block;
+    float: left;
+}
+#stopka{
+    background-color: palegreen;
+    padding: 3px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+table, td{
+    border-width: 1px;
+    border-color: darkgreen;
+    border-style: solid;
+    
+    
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+td, th{
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+button{
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+button:hover{
+    background-color: honeydew;
+    color: darkgreen;
+}
+#b{
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+#b:hover{
+    background-color: honeydew;
+    color: darkgreen;
+}
+

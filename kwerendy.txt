@@ -1,0 +1,6 @@
+SELECT materialy.nazwa, materialy.ilosc, producenci.nazwaProd FROM materialy, producenci WHERE materialy.ilosc>9;
+SELECT materialy.nazwa, producenci.nazwaProd, jednostki.nazwaJedn FROM materialy, producenci, jednostki;
+CREATE USER 'zaopatrzenie1'@'localhost' IDENTIFIED BY 'Z@op@trzenie';
+GRANT SELECT, UPDATE, INSERT, DELETE ON firma.* TO 'zaopatrzenie1'@'localhost';
+
+

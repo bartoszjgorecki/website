@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia hurtowe</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <div id="baner">
+        <h1>Sieci komputerowe</h1>
+    </div>
+    <div id="lewy">
+        <h2>Aktualizacja i zamówienia materiałów</h2>
+        <p>Do wewnętrznego użytku firmy</p>
+        <img src="./obraz.png" alt="sieć komputerowa">
+    </div>
+    <div id="prawy">
+        <table>
+            <tr>
+                <th>Produkt</th>
+                <th>Jednostka</th>
+                <th>Dostępna ilość</th>
+                <th>Aktualizacja</th>
+                <th>Zamówienie</th>
+            </tr>
+            <tr>
+                <td id="b1">Skrętka U/UTP drut</td>
+                <td>metr</td>
+                <td id="a1">20</td>
+                <td><input type="button" id="b" value="Aktualizuj" onclick="akt1()"></td>
+                <td><input id="b" type="button" value="Zamów" onclick="zam1()"></td>
+            </tr>
+            <tr>
+                <td id="b2">Skrętka U/UTP linka</td>
+                <td>metr</td>
+                <td id="a2">2</td>
+                <td><input type="button" id="b" value="Aktualizuj" onclick="akt2()"></td>
+                <td><input type="button" id="b" value="Zamów" onclick="zam2()"></td>
+            </tr>
+            <tr>
+                <td id="b3">Wtyki 8P8C</td>
+                <td>sztuki</td>
+                <td id="a3">10</td>
+                <td><input type="button" id="b" value="Aktualizuj" onclick="akt3()"></td>
+                <td><input type="button" id="b" value="Zamów" onclick="zam3()"></td>
+            </tr>
+            <tr>
+                <td id="b4">Moduły Keystone</td>
+                <td>sztuki</td>
+                <td id="a4">30</td>
+                <td><input type="button" id="b" value="Aktualizuj" onclick="akt4()"></td>
+                <td><input type="button" id="b" value="Zamów" onclick="zam4()"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="stopka">
+        <a href="http://sieci.pl/" target="_blank">Nasza strona internetowa</a>
+        <p>Stronę przygotował: Bartosz Górecki 5FP</p>
+    </div>
+    <script>
+        let a1id=0
+        function braki(){
+            let a11=document.getElementsByTagName("td")[2]
+            let a22=document.getElementsByTagName("td")[7]
+            let a33=document.getElementsByTagName("td")[12]
+            let a44=document.getElementsByTagName("td")[17]
+
+            if (Number(a11.innerHTML)==0) {
+                a11.style.backgroundColor='red'
+            } else {
+                if (Number(a11.innerHTML)<=5 && Number(a11.innerHTML)>=1) {
+                    a11.style.backgroundColor='yellow'  
+                }else{
+                    a11.style.backgroundColor='Honeydew'
+                }
+            }
+
+            if (Number(a22.innerHTML)==0) {
+                a22.style.backgroundColor='red'
+            } else {
+                if (Number(a22.innerHTML)<=5 && Number(a22.innerHTML)>=1) {
+                    a22.style.backgroundColor='yellow'  
+                }else{
+                    a22.style.backgroundColor='Honeydew'
+                }
+            }
+            if (Number(a33.innerHTML)==0) {
+                a33.style.backgroundColor='red'
+            } else {
+                if (Number(a33.innerHTML)<=5 && Number(a33.innerHTML)>=1) {
+                    a33.style.backgroundColor='yellow'  
+                }else{
+                    a33.style.backgroundColor='Honeydew'
+                }
+            }
+            if (Number(a44.innerHTML)==0) {
+                a44.style.backgroundColor='red'
+            } else {
+                if (Number(a44.innerHTML)<=5 && Number(a44.innerHTML)>=1) {
+                    a44.style.backgroundColor='yellow'  
+                }else{
+                    a44.style.backgroundColor='Honeydew'
+                }
+            }
+        }
+        braki()
+        function akt1(){
+            nw=Number(prompt("Podaj nową ilość: "))
+            a1=document.getElementById("a1")
+            a1.innerHTML=nw.toString()
+            braki()
+        }
+        function akt2(){
+            nw=Number(prompt("Podaj nową ilość: "))
+            a2=document.getElementById("a2")
+            a2.innerHTML=nw.toString()
+            braki()
+        }
+        function akt3(){
+            nw=Number(prompt("Podaj nową ilość: "))
+            a3=document.getElementById("a3")
+            a3.innerHTML=nw.toString()
+            braki()
+        }
+        function akt4(){
+            nw=Number(prompt("Podaj nową ilość: "))
+            a4=document.getElementById("a4")
+            a4.innerHTML=nw.toString()
+            braki()
+        }
+        
+        function zam1(){
+            a1id=a1id+1
+            let b1=document.getElementById("b1")
+            alert("Zamówienie nr: "+a1id.toString()+" Produkt: "+b1.innerHTML.toString())
+        }
+        function zam2(){
+            a1id=a1id+1
+            let b2=document.getElementById("b2")
+            alert("Zamówienie nr: "+a1id.toString()+" Produkt: "+b2.innerHTML.toString())
+        }
+        function zam3(){
+            a1id=a1id+1
+            let b3=document.getElementById("b3")
+            alert("Zamówienie nr: "+a1id.toString()+" Produkt: "+b3.innerHTML.toString())
+        }
+        function zam4(){
+            a1id=a1id+1
+            let b4=document.getElementById("b4")
+            alert("Zamówienie nr: "+a1id.toString()+" Produkt: "+b4.innerHTML.toString())
+        }
+    </script>
+</body>
+</html>
